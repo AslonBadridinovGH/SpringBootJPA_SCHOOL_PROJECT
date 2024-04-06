@@ -19,7 +19,6 @@ public class TimeTables {
 
     private Integer year;
 
-
     @OneToMany
     private List<Subject>subjects;
 

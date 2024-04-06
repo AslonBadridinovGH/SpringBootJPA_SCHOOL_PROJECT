@@ -21,7 +21,7 @@ public class StudentController {
     SchoolRepository schoolRepository;
 
     //READ
-    @RequestMapping(value = "/student",method = RequestMethod.GET)
+    @RequestMapping(value = "/student", method = RequestMethod.GET)
     public List<Student> getStudents(){
         return studentRepository.findAll();
     }
@@ -63,10 +63,11 @@ public class StudentController {
          studentRepository.save(student);
 
          return "Student edited";
-     }return "Student not found";
+     }
+        return "Student not found";
 }
 
-    //DELETE
+    // DELETE
     @RequestMapping(value = "/student/{id}", method = RequestMethod.DELETE)
     public String deleteStudent(@PathVariable Integer id) {
         studentRepository.deleteById(id);
